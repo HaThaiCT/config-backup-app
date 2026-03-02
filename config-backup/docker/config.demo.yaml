@@ -1,0 +1,25 @@
+# ─────────────────────────────────────────────────────
+# config.demo.yaml — Config dùng riêng cho Docker demo
+# ─────────────────────────────────────────────────────
+
+backup:
+  sources:
+    - /etc/demo-configs/nginx.conf
+    - /etc/demo-configs/sshd_config
+    - /etc/demo-configs/crontab
+    - /etc/demo-configs/app
+    - /etc/nonexistent-file.conf   # ← sẽ bị bỏ qua (test tính năng skip)
+
+  destination: /backups
+  archive_prefix: backup
+
+schedule:
+  interval: "00:00:01:00"   # mỗi 1 phút (dùng để test nhanh)
+
+retention:
+  max_age_days: 1
+  keep_last_n: 5
+
+logging:
+  log_file: /var/log/config-backup/backup.log
+  level: INFO

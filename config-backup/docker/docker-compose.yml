@@ -1,0 +1,15 @@
+services:
+  config-backup:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: config-backup-demo
+    volumes:
+      # Thư mục backup ánh xạ ra host để xem file .tar.gz sau khi chạy
+      - ./volumes/backups:/backups
+      # Log ánh xạ ra host để xem trực tiếp
+      - ./volumes/logs:/var/log/config-backup
+    # Giữ container chạy để có thể exec vào
+    stdin_open: true
+    tty: true
+    command: /bin/bash

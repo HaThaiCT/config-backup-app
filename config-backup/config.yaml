@@ -1,0 +1,39 @@
+# ============================================================
+# config-backup — File cấu hình
+# ============================================================
+
+backup:
+  # Danh sách file/thư mục cần backup (bỏ qua nếu không tồn tại)
+  sources:
+    - /etc/nginx
+    - /etc/ssh/sshd_config
+    - /home/user/.config
+    - /etc/crontab
+
+  # Thư mục lưu file backup
+  destination: /backups
+
+  # Tiền tố tên file backup → backup_20260302_020000.tar.gz
+  archive_prefix: backup
+
+schedule:
+  # Khoảng thời gian tự động backup: dd:hh:mm:ss
+  # Ví dụ: "07:00:00:00" = mỗi 7 ngày
+  #         "00:06:00:00" = mỗi 6 tiếng
+  #         "00:00:30:00" = mỗi 30 phút (tối thiểu)
+  # Bỏ comment dòng dưới để bật tự động backup
+  # interval: "01:00:00:00"
+
+retention:
+  # Xóa backup cũ hơn N ngày (bỏ comment để bật)
+  # max_age_days: 30
+
+  # Chỉ giữ N bản backup gần nhất (bỏ comment để bật)
+  # keep_last_n: 7
+
+logging:
+  # Đường dẫn file log
+  log_file: ~/.local/share/config-backup/backup.log
+
+  # Mức log: DEBUG | INFO | WARNING | ERROR
+  level: INFO

@@ -1,0 +1,114 @@
+2026-03-01 19:25:14  INFO      ════════════════════════════════════════════════════════════
+2026-03-01 19:25:14  INFO      Bắt đầu backup (DRY-RUN)
+2026-03-01 19:25:14  INFO      Config: /app/config.demo.yaml
+2026-03-01 19:25:14  INFO      Archive: /backups/backup_20260301_192514.tar.gz
+2026-03-01 19:25:14  INFO      Nguồn (5):
+2026-03-01 19:25:14  INFO        - /etc/demo-configs/nginx.conf
+2026-03-01 19:25:14  INFO        - /etc/demo-configs/sshd_config
+2026-03-01 19:25:14  INFO        - /etc/demo-configs/crontab
+2026-03-01 19:25:14  INFO        - /etc/demo-configs/app
+2026-03-01 19:25:14  INFO        - /etc/nonexistent-file.conf
+2026-03-01 19:25:14  INFO      [DRY-RUN] Sẽ tạo archive: /backups/backup_20260301_192514.tar.gz
+2026-03-01 19:25:14  INFO      [DRY-RUN]   + /etc/demo-configs/nginx.conf
+2026-03-01 19:25:14  INFO      [DRY-RUN]   + /etc/demo-configs/sshd_config
+2026-03-01 19:25:14  INFO      [DRY-RUN]   + /etc/demo-configs/crontab
+2026-03-01 19:25:14  INFO      [DRY-RUN]   + /etc/demo-configs/app
+2026-03-01 19:25:14  WARNING   [DRY-RUN]   ✗ Bỏ qua (không tồn tại): /etc/nonexistent-file.conf
+2026-03-01 19:25:14  INFO      Backup hoàn thành: 4 nguồn được lưu.
+2026-03-01 19:25:14  INFO      Áp dụng retention policy...
+2026-03-01 19:25:14  INFO      Kết thúc.
+2026-03-01 19:25:14  INFO      ════════════════════════════════════════════════════════════
+2026-03-01 19:25:14  INFO      Bắt đầu backup
+2026-03-01 19:25:14  INFO      Config: /app/config.demo.yaml
+2026-03-01 19:25:14  INFO      Archive: /backups/backup_20260301_192514.tar.gz
+2026-03-01 19:25:14  INFO      Nguồn (5):
+2026-03-01 19:25:14  INFO        - /etc/demo-configs/nginx.conf
+2026-03-01 19:25:14  INFO        - /etc/demo-configs/sshd_config
+2026-03-01 19:25:14  INFO        - /etc/demo-configs/crontab
+2026-03-01 19:25:14  INFO        - /etc/demo-configs/app
+2026-03-01 19:25:14  INFO        - /etc/nonexistent-file.conf
+2026-03-01 19:25:14  INFO        + Đã thêm: /etc/demo-configs/nginx.conf
+2026-03-01 19:25:14  INFO        + Đã thêm: /etc/demo-configs/sshd_config
+2026-03-01 19:25:14  INFO        + Đã thêm: /etc/demo-configs/crontab
+2026-03-01 19:25:14  INFO        + Đã thêm: /etc/demo-configs/app
+2026-03-01 19:25:14  WARNING   Bỏ qua (không tồn tại): /etc/nonexistent-file.conf
+2026-03-01 19:25:14  INFO      Archive đã tạo: /backups/backup_20260301_192514.tar.gz (0.00 MB)
+2026-03-01 19:25:14  INFO      Backup hoàn thành: 4 nguồn được lưu.
+2026-03-01 19:25:14  INFO      Áp dụng retention policy...
+2026-03-01 19:25:14  INFO      Kết thúc.
+2026-03-01 19:25:16  INFO      ════════════════════════════════════════════════════════════
+2026-03-01 19:25:16  INFO      Bắt đầu backup
+2026-03-01 19:25:16  INFO      Config: /app/config.demo.yaml
+2026-03-01 19:25:16  INFO      Archive: /backups/backup_20260301_192516.tar.gz
+2026-03-01 19:25:16  INFO      Nguồn (5):
+2026-03-01 19:25:16  INFO        - /etc/demo-configs/nginx.conf
+2026-03-01 19:25:16  INFO        - /etc/demo-configs/sshd_config
+2026-03-01 19:25:16  INFO        - /etc/demo-configs/crontab
+2026-03-01 19:25:16  INFO        - /etc/demo-configs/app
+2026-03-01 19:25:16  INFO        - /etc/nonexistent-file.conf
+2026-03-01 19:25:16  INFO        + Đã thêm: /etc/demo-configs/nginx.conf
+2026-03-01 19:25:16  INFO        + Đã thêm: /etc/demo-configs/sshd_config
+2026-03-01 19:25:16  INFO        + Đã thêm: /etc/demo-configs/crontab
+2026-03-01 19:25:16  INFO        + Đã thêm: /etc/demo-configs/app
+2026-03-01 19:25:16  WARNING   Bỏ qua (không tồn tại): /etc/nonexistent-file.conf
+2026-03-01 19:25:16  INFO      Archive đã tạo: /backups/backup_20260301_192516.tar.gz (0.00 MB)
+2026-03-01 19:25:16  INFO      Backup hoàn thành: 4 nguồn được lưu.
+2026-03-01 19:25:16  INFO      Áp dụng retention policy...
+2026-03-01 19:25:16  INFO      Kết thúc.
+2026-03-02 03:53:26  INFO      ════════════════════════════════════════════════════════════
+2026-03-02 03:53:26  INFO      Bắt đầu backup (DRY-RUN)
+2026-03-02 03:53:26  INFO      Config: /app/config.demo.yaml
+2026-03-02 03:53:26  INFO      Archive: /backups/backup_20260302_035326.tar.gz
+2026-03-02 03:53:26  INFO      Nguồn (5):
+2026-03-02 03:53:26  INFO        - /etc/demo-configs/nginx.conf
+2026-03-02 03:53:26  INFO        - /etc/demo-configs/sshd_config
+2026-03-02 03:53:26  INFO        - /etc/demo-configs/crontab
+2026-03-02 03:53:26  INFO        - /etc/demo-configs/app
+2026-03-02 03:53:26  INFO        - /etc/nonexistent-file.conf
+2026-03-02 03:53:26  INFO      [DRY-RUN] Sẽ tạo archive: /backups/backup_20260302_035326.tar.gz
+2026-03-02 03:53:26  INFO      [DRY-RUN]   + /etc/demo-configs/nginx.conf
+2026-03-02 03:53:26  INFO      [DRY-RUN]   + /etc/demo-configs/sshd_config
+2026-03-02 03:53:26  INFO      [DRY-RUN]   + /etc/demo-configs/crontab
+2026-03-02 03:53:26  INFO      [DRY-RUN]   + /etc/demo-configs/app
+2026-03-02 03:53:26  WARNING   [DRY-RUN]   ✗ Bỏ qua (không tồn tại): /etc/nonexistent-file.conf
+2026-03-02 03:53:26  INFO      Backup hoàn thành: 4 nguồn được lưu.
+2026-03-02 03:53:26  INFO      Áp dụng retention policy...
+2026-03-02 03:53:26  INFO      Kết thúc.
+2026-03-02 03:53:27  INFO      ════════════════════════════════════════════════════════════
+2026-03-02 03:53:27  INFO      Bắt đầu backup
+2026-03-02 03:53:27  INFO      Config: /app/config.demo.yaml
+2026-03-02 03:53:27  INFO      Archive: /backups/backup_20260302_035327.tar.gz
+2026-03-02 03:53:27  INFO      Nguồn (5):
+2026-03-02 03:53:27  INFO        - /etc/demo-configs/nginx.conf
+2026-03-02 03:53:27  INFO        - /etc/demo-configs/sshd_config
+2026-03-02 03:53:27  INFO        - /etc/demo-configs/crontab
+2026-03-02 03:53:27  INFO        - /etc/demo-configs/app
+2026-03-02 03:53:27  INFO        - /etc/nonexistent-file.conf
+2026-03-02 03:53:27  INFO        + Đã thêm: /etc/demo-configs/nginx.conf
+2026-03-02 03:53:27  INFO        + Đã thêm: /etc/demo-configs/sshd_config
+2026-03-02 03:53:27  INFO        + Đã thêm: /etc/demo-configs/crontab
+2026-03-02 03:53:27  INFO        + Đã thêm: /etc/demo-configs/app
+2026-03-02 03:53:27  WARNING   Bỏ qua (không tồn tại): /etc/nonexistent-file.conf
+2026-03-02 03:53:27  INFO      Archive đã tạo: /backups/backup_20260302_035327.tar.gz (0.00 MB)
+2026-03-02 03:53:27  INFO      Backup hoàn thành: 4 nguồn được lưu.
+2026-03-02 03:53:27  INFO      Áp dụng retention policy...
+2026-03-02 03:53:27  INFO      Kết thúc.
+2026-03-02 03:53:29  INFO      ════════════════════════════════════════════════════════════
+2026-03-02 03:53:29  INFO      Bắt đầu backup
+2026-03-02 03:53:29  INFO      Config: /app/config.demo.yaml
+2026-03-02 03:53:29  INFO      Archive: /backups/backup_20260302_035329.tar.gz
+2026-03-02 03:53:29  INFO      Nguồn (5):
+2026-03-02 03:53:29  INFO        - /etc/demo-configs/nginx.conf
+2026-03-02 03:53:29  INFO        - /etc/demo-configs/sshd_config
+2026-03-02 03:53:29  INFO        - /etc/demo-configs/crontab
+2026-03-02 03:53:29  INFO        - /etc/demo-configs/app
+2026-03-02 03:53:29  INFO        - /etc/nonexistent-file.conf
+2026-03-02 03:53:29  INFO        + Đã thêm: /etc/demo-configs/nginx.conf
+2026-03-02 03:53:29  INFO        + Đã thêm: /etc/demo-configs/sshd_config
+2026-03-02 03:53:29  INFO        + Đã thêm: /etc/demo-configs/crontab
+2026-03-02 03:53:29  INFO        + Đã thêm: /etc/demo-configs/app
+2026-03-02 03:53:29  WARNING   Bỏ qua (không tồn tại): /etc/nonexistent-file.conf
+2026-03-02 03:53:29  INFO      Archive đã tạo: /backups/backup_20260302_035329.tar.gz (0.00 MB)
+2026-03-02 03:53:29  INFO      Backup hoàn thành: 4 nguồn được lưu.
+2026-03-02 03:53:29  INFO      Áp dụng retention policy...
+2026-03-02 03:53:29  INFO      Kết thúc.
