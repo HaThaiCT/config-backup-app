@@ -26,7 +26,7 @@ Service tự động backup các file cấu hình trên Ubuntu Server với kh�
 
 ```powershell
 # 1. Clone repository
-git clone https://github.com/your-org/backup-service.git
+git clone https://github.com/HaThaiCT/config-backup-app.git
 cd backup-service
 
 # 2. Build Docker image
@@ -72,7 +72,7 @@ Scheduler running. Press Ctrl+C to stop.
 #### Bước 1: Clone repository
 
 ```bash
-git clone https://github.com/your-org/backup-service.git
+git clone https://github.com/HaThaiCT/config-backup-app.git
 cd backup-service
 ```
 
@@ -161,7 +161,7 @@ docker exec -it backup-service /bin/sh
 #### Bước 1: Clone repository
 
 ```bash
-git clone https://github.com/your-org/backup-service.git
+git clone https://github.com/HaThaiCT/config-backup-app.git
 cd backup-service
 ```
 
