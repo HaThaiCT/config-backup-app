@@ -1,0 +1,25 @@
+# =============================================================================
+# BACKUP SERVICE CONFIGURATION (Docker)
+# =============================================================================
+
+backup:
+  # Trong container, backup các file system config
+  source_files:
+    - /etc/hostname
+    - /etc/resolv.conf
+    - /etc/backup-service/config.yaml
+  destination: /backups
+
+schedule:
+  backup_interval: "00:00:02:00"    # 2 phút (demo)
+  cleanup_interval: "00:00:05:00"   # 5 phút
+
+cleanup:
+  ttl: "00:00:30:00"                # 30 phút (demo)
+  min_keep: 3
+
+logging:
+  level: DEBUG
+  file: null
+  max_size_mb: 10
+  backup_count: 5

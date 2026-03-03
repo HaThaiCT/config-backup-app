@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  backup-service:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: backup-service
+    restart: unless-stopped
+    
+    # Mount volumes
+    volumes:
+      # Backup destination
+      - backup-data:/backups
+      
+      # Configuration file for Docker (fallback nếu không có conf.d)
+      - ../config/config.docker.yaml:/etc/backup-service/config.yaml:ro
+      
+      # Multi-config directory (conf.d) - đang test multi-config
+      - ./conf.d:/etc/backup-service/conf.d:ro
+      
+      # Source files to backup (add your paths here)
+      # Example:
+      # - /etc/nginx:/etc/nginx:ro
+      # - /etc/ssh:/etc/ssh:ro
+      
+      # Log files
+      - backup-logs:/var/log/backup-service
+    
+    # Environment variables
+    environment:
+      - BACKUP_CONFIG=/etc/backup-service/config.yaml
+      - TZ=Asia/Ho_Chi_Minh
+    
+    # Logging
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  backup-data:
+    name: backup-service-data
+  backup-logs:
+    name: backup-service-logs

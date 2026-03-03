@@ -1,0 +1,25 @@
+# =============================================================================
+# MYSQL BACKUP CONFIGURATION
+# =============================================================================
+# File: mysql.yaml
+# Backs up MySQL configuration files
+
+name: mysql
+
+backup:
+  source_files:
+    - /etc/mysql/my.cnf
+    - /etc/mysql/mysql.conf.d/
+    - /etc/mysql/conf.d/
+  destination: /backups
+
+schedule:
+  backup_interval: "01:00:00:00"    # 1 ngày
+  cleanup_interval: "01:00:00:00"   # 1 ngày
+
+cleanup:
+  ttl: "30:00:00:00"                # 30 ngày
+  min_keep: 5
+
+logging:
+  level: INFO

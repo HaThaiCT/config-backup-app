@@ -1,0 +1,4 @@
+# Production dependencies
+PyYAML>=6.0
+APScheduler>=3.10.0
+pydantic>=2.0

@@ -1,0 +1,25 @@
+# =============================================================================
+# DOCKER - APP CONFIG BACKUP
+# =============================================================================
+# Backs up application source code và configs trong Docker container
+
+name: app
+
+backup:
+  source_files:
+    - /app/src/
+    - /etc/backup-service/config.yaml
+    - /etc/backup-service/conf.d/
+  destination: /backups
+
+schedule:
+  backup_interval: "00:00:07:00"    # 7 phút (demo, khác với system)
+  cleanup_interval: "00:00:05:00"   # 5 phút
+
+cleanup:
+  ttl: "00:00:30:00"                # 30 phút
+  min_keep: 3
+
+logging:
+  level: DEBUG
+  file: /var/log/backup-service/app.log

@@ -1,0 +1,59 @@
+# =============================================================================
+# BACKUP SERVICE CONFIGURATION
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Backup settings
+# -----------------------------------------------------------------------------
+backup:
+  # Danh sách file/folder cần backup
+  source_files:
+    - /etc/nginx/nginx.conf
+    - /etc/nginx/sites-available/
+    - /etc/ssh/sshd_config
+    - /etc/mysql/my.cnf
+  
+  # Thư mục lưu backup
+  destination: /backups
+
+# -----------------------------------------------------------------------------
+# Schedule settings (format: DD:HH:MM:SS)
+# -----------------------------------------------------------------------------
+schedule:
+  # Chu kỳ backup tự động
+  # Ví dụ:
+  #   "00:01:00:00" = 1 giờ
+  #   "00:06:00:00" = 6 giờ  
+  #   "01:00:00:00" = 1 ngày
+  #   "07:00:00:00" = 7 ngày
+  backup_interval: "01:00:00:00"
+  
+  # Chu kỳ chạy cleanup (kiểm tra và xóa file cũ)
+  cleanup_interval: "01:00:00:00"
+
+# -----------------------------------------------------------------------------
+# Cleanup settings
+# -----------------------------------------------------------------------------
+cleanup:
+  # Thời gian sống của backup (xóa file cũ hơn TTL)
+  # Format: DD:HH:MM:SS
+  ttl: "30:00:00:00"
+  
+  # Số lượng backup tối thiểu phải giữ lại (không xóa dù quá TTL)
+  min_keep: 5
+
+# -----------------------------------------------------------------------------
+# Logging settings
+# -----------------------------------------------------------------------------
+logging:
+  # Level: DEBUG, INFO, WARNING, ERROR
+  level: INFO
+  
+  # File log (để trống hoặc bỏ để chỉ log ra console)
+  file: /var/log/backup-service/backup.log
+  
+  # Kích thước tối đa mỗi file log (MB)
+  max_size_mb: 10
+  
+  # Số file log cũ giữ lại
+  backup_count: 5

@@ -1,0 +1,25 @@
+# =============================================================================
+# DOCKER - SYSTEM CONFIG BACKUP
+# =============================================================================
+# Backs up system configuration files trong Docker container
+
+name: system
+
+backup:
+  source_files:
+    - /etc/passwd
+    - /etc/group
+    - /etc/hosts
+  destination: /backups
+
+schedule:
+  backup_interval: "00:00:05:00"    # 5 phút (demo)
+  cleanup_interval: "00:00:05:00"   # 5 phút
+
+cleanup:
+  ttl: "00:00:30:00"                # 30 phút
+  min_keep: 3
+
+logging:
+  level: INFO
+  file: /var/log/backup-service/system.log

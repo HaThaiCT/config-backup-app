@@ -1,0 +1,23 @@
+# =============================================================================
+# BACKUP SERVICE CONFIGURATION (Development)
+# =============================================================================
+
+backup:
+  source_files:
+    - ./test_files/file1.conf
+    - ./test_files/file2.conf
+  destination: ./backups
+
+schedule:
+  backup_interval: "00:00:05:00"    # 5 phút (để test)
+  cleanup_interval: "00:00:10:00"   # 10 phút
+
+cleanup:
+  ttl: "00:01:00:00"                # 1 giờ (để test)
+  min_keep: 3
+
+logging:
+  level: DEBUG
+  file: null                        # Console only
+  max_size_mb: 10
+  backup_count: 5

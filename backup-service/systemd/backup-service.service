@@ -1,0 +1,36 @@
+[Unit]
+Description=Ubuntu Backup Service
+Documentation=https://github.com/your-org/backup-service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/backup-service/venv/bin/python -m src.main
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=10
+
+# User and permissions
+User=root
+Group=root
+
+# Working directory
+WorkingDirectory=/opt/backup-service
+
+# Environment
+Environment=BACKUP_CONFIG=/etc/backup-service/config.yaml
+Environment=PYTHONUNBUFFERED=1
+
+# Logging
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=backup-service
+
+# Security hardening
+NoNewPrivileges=false
+ProtectSystem=false
+ProtectHome=false
+ReadWritePaths=/backups /var/log/backup-service
+
+[Install]
+WantedBy=multi-user.target
